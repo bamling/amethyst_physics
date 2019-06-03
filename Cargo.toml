@@ -1,0 +1,30 @@
+[package]
+name = "amethyst_physics"
+version = "0.0.1"
+authors = ["Benjamin Amling <benjamin@amling.net>"]
+repository = "https://github.com/bamling/amethyst_physics.git"
+homepage = "https://github.com/bamling/amethyst_physics.git"
+edition = "2018"
+
+license = "MIT"
+readme = "README.md"
+#documentation = "https://docs.rs/amethyst_physics"
+#description = "Amethyst nphysics integration based on specs-physics"
+
+keywords = ["specs", "nphysics", "nphysics3d", "amethyst"]
+
+[dependencies.amethyst]
+git = "https://github.com/amethyst/amethyst"
+features = ["nightly", "vulkan"]
+
+#[dependencies.specs-physics]
+#git = "https://github.com/amethyst/specs-physics"
+
+[dependencies]
+log = "0.4.6"
+#specs-physics = "0.2.1"
+specs-physics = { path = "../../amethyst/specs-physics" }
+
+[[example]]
+name = "basic"
+path = "examples/basic/main.rs"
